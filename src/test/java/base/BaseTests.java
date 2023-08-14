@@ -1,36 +1,31 @@
 package base;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class BaseTests {
+
     private WebDriver driver;
 
     public void setUp(){
-        System.setProperty("webdriver.chrome.diver", "resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
 
-        driver.manage().window().setSize(new Dimension(1024, 812));
+        driver.findElement(By.linkText("Shifting Content")).click();
+        driver.findElement(By.linkText(("Example 1: Menu Element"))).click();
+        List<WebElement> menuItems = driver.findElements(By.tagName("li"));
+        System.out.println("Number of menu items: " + menuItems.size());
 
-        WebElement shifting_Content = driver.findElement(By.linkText("Shifting Content"));
-        shifting_Content.click();
-
-        System.out.println(driver.getTitle());
-//        driver.quit();
+        driver.quit();
     }
 
-    public void clickOnShiftContent(){
-        WebElement menu_Element = driver.findElement(By.linkText("Example 1: Menu Element"));
-        menu_Element.click();
-    }
-
-    public static void main(String[] args) {
-        BaseTests tests = new BaseTests();
-        tests.setUp();
-        tests.clickOnShiftContent();
+    public static void main(String args[]){
+        BaseTests test = new BaseTests();
+        test.setUp();
     }
 }
