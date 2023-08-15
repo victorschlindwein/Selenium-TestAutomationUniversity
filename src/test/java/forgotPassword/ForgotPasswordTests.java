@@ -18,7 +18,7 @@ public class ForgotPasswordTests extends BaseTests {
         assertEquals(emailPage.getMessageContent(), "Your e-mail's been sent!", "Message is incorrect");
 
         */
-        
+
         forgotPasswordPage.retrievePassword("vitorluizrovaresco@gmail.com");
         assertEquals("Internal Server Error", "Internal Server Error");
     }
