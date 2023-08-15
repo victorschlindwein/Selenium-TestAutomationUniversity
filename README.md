@@ -25,7 +25,7 @@ Antes de executar os testes, você precisará ter instalado:
 ## Como Executar os Testes
 
 1. Clone este repositório: `git clone https://github.com/victorschlindwein/Selenium-TestAutomationUniversity.git`
-2. Navegue para o diretório do projeto: `cd seu-projeto`
+2. Navegue para o diretório do projeto: `cd Selenium-TestAutomationUniversity`
 3. Compile o projeto usando o Maven: `mvn clean compile`
 4. Execute os testes utilizando o TestNG: `mvn test`
 
