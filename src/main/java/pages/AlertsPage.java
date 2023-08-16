@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AlertsPage {
-    WebDriver driver;
+    private WebDriver driver;
     private By triggerAlertButton = By.xpath("//*[@id=\"content\"]/div/ul/li[1]/button");
     private By triggerConfirmButton = By.xpath("//*[@id=\"content\"]/div/ul/li[2]/button");
     private By triggerPromptButton = By.xpath("//*[@id=\"content\"]/div/ul/li[3]/button");

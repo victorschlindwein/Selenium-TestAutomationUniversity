@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class KeyPressesPage {
-    WebDriver driver;
+    private WebDriver driver;
     private By inputField = By.id("target");
     private By result = By.id("result");
 
