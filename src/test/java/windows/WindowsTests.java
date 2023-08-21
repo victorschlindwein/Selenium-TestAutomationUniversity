@@ -11,6 +11,5 @@ public class WindowsTests extends BaseTests {
         var buttonPage = homePage.clickDynamicLoading().rightClickOnExample2Link();
         getWindowManager().switchToNewTab();
         assertTrue(buttonPage.isStartButtonDisplayed(), "FAIL, button was not displayed. Something went wrong");
-
     }
 }
